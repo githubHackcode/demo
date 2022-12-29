@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = (event) => {
+            const bodyValue = { postId: 1 };
+            const options = {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(bodyValue), 
+            };
+            fetch('http://localhost:8000/like', options)
+          };
+          setTimeout(redirect, 2000);
+          function redirect(){
+            window.location="http://localhost:8000/";
+          }
+    </script>
+    <style>
+        .text{
+            text-align: center;
+        }
+        h1{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+    
+    <h1 style="text-align:center" class="text">Thanks for conformation</h1>
+    <h2 style="text-align:center">Your account deactivation request is cancled</h2>
+</html>
